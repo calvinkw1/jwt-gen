@@ -1,4 +1,5 @@
 require 'jwt'
+require 'pry'
 
 class Token
 
@@ -73,8 +74,14 @@ class Token
     JWT.encode payload, secret, alg
   end
 
-  def token_pbcopy token
-    IO.popen('pbcopy', 'w') {|io| io << token}
+  def token_copy token
+    binding.pry
+    case RbConfig::CONFIG['host_os']
+      when /linux/
+        `echo #{token} | xclip -selection clipboard`
+      when /darwin/
+        `echo #{token} | pbcopy` 
+    end
     puts "JWT successfully copied to clipboard!"
   end
 

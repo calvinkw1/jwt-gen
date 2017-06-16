@@ -18,4 +18,4 @@ secret = token.set_secret
 puts "Generating JWT..."
 sleep 1
 jwt = token.encode_token payload, secret, algorithm
-token.token_pbcopy jwt
+token.token_copy jwt

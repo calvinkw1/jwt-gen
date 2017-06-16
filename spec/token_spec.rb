@@ -100,8 +100,14 @@ describe Token do
     end
 
     it "Should copy JWT to pastboard" do
-      @token.token_pbcopy(@jwt)
-      expect(IO.popen('pbpaste', 'r').read).to be_truthy
+      @token.token_copy(@jwt)
+      case RbConfig::CONFIG['host_os']
+        when /linux/
+          expect(`xclip -o`).to be_truthy
+        when /darwin/
+          expect(IO.popen('pbpaste', 'r').read).to be_truthy
+      end
+      
     end
 
   end
