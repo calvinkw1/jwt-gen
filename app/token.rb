@@ -78,7 +78,7 @@ class Token
       when /linux/
         `echo #{token} | xclip -selection clipboard`
       when /darwin/
-        `echo #{token} | pbcopy` 
+        `echo #{token} | pbcopy`
     end
     puts "JWT successfully copied to clipboard!"
   end

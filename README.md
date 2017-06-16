@@ -31,7 +31,3 @@ Required inputs are user_id and email. In addition, other key/value pairs can al
   - General programming style
   - Test coverage
   - CLI ease of use
-
-=============
-
-## Assumptions
