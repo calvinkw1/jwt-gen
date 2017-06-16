@@ -1,5 +1,4 @@
 require 'jwt'
-require 'pry'
 
 class Token
 
@@ -75,7 +74,6 @@ class Token
   end
 
   def token_copy token
-    binding.pry
     case RbConfig::CONFIG['host_os']
       when /linux/
         `echo #{token} | xclip -selection clipboard`
