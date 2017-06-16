@@ -76,7 +76,7 @@ class Token
   def token_copy token
     case RbConfig::CONFIG['host_os']
       when /linux/
-        `echo #{token} | xclip -selection clipboard`
+        `echo #{token} | xclip`
       when /darwin/
         `echo #{token} | pbcopy`
     end
