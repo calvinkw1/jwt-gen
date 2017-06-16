@@ -1,6 +1,5 @@
 require 'spec_helper'
 require_relative '../app/token'
-require 'pry'
 
 describe Token do
 

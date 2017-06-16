@@ -32,23 +32,6 @@ Required inputs are user_id and email. In addition, other key/value pairs can al
   - Test coverage
   - CLI ease of use
 
+=============
 
-
-Add path to app to $PATH in .bashrc/.zshrcfor access anywhere in the directory
-Use Ruby's OptionParser standard class to parse for command line args
-  - Command line args show up in ARGV array
-
-
-JWT Header
-  - Specify algorithm types here
-JWT Payload
-  - Include claims here
-    - issuer
-    - subject
-    - not before time
-    - expiration time
-    - issue at time
-    - JWT ID
-    - type
-JWT Signature
-  - base64url encoded hash of Header, Payload, and Secret
+## Assumptions

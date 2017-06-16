@@ -2,8 +2,6 @@
 
 #TODO: check LOAD_PATH configuration so that the requires can actually be relative
 require_relative '../app/token'
-require 'jwt'
-require 'pry'
 
 token = Token.new
 

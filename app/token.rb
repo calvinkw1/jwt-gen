@@ -1,5 +1,5 @@
 require 'jwt'
-require 'pry'
+
 
 class Token
 
