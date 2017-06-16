@@ -1,6 +1,5 @@
 require 'jwt'
 
-
 class Token
 
   def set_alg
@@ -78,6 +77,5 @@ class Token
     IO.popen('pbcopy', 'w') {|io| io << token}
     puts "JWT successfully copied to clipboard!"
   end
-
 
 end

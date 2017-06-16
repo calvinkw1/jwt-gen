@@ -1,2 +1,2 @@
+rspec spec --format documentation
 --require spec_helper
-rspec spec --format d

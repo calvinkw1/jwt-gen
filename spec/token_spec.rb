@@ -1,4 +1,3 @@
-require 'spec_helper'
 require './app/token'
 
 describe Token do
