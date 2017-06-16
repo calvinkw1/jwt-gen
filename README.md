@@ -1,3 +1,30 @@
+### Installation
+
+	git clone https://github.com/calvinkw1/jwt-gen.git
+
+### Usage
+Add the path to `/jwt-gen/bin` to your `$PATH`. Run `jwt-gen`:
+
+	Input issuer user ID..
+	user1234
+	Input issuer email..
+	example@go.com
+	Input expiration(exp) time in hours (1/2/3/4/etc)..
+	1
+	Any additional claims? (y/n)
+	y
+	Please enter key name
+	foo
+	Please enter value
+	bar
+	Any additional claims? (y/n)
+	n
+	Initializing token type JWT with HS256 algorithm..
+	Input secret..
+	mysecret
+	Generating JWT...
+	JWT successfully copied to clipboard!
+
 ### **Challenge 2**
 
 #### **The task**
