@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+#TODO: check LOAD_PATH configuration so that the requires can actually be relative
+require_relative '../app/token'
+require 'jwt'
+require 'pry'
+
+token = Token.new
+
+user_id = token.get_user_id
+email = token.get_email
+exp = token.get_exp
+additional_claims = {}
+token.set_additional_claims additional_claims
+
+algorithm = token.set_alg
+payload = token.set_payload_claims user_id, email, exp, additional_claims
+secret = token.set_secret
+
+puts "Generating JWT..."
+sleep 1
+jwt = token.encode_token payload, secret, algorithm
+token.token_pbcopy jwt
