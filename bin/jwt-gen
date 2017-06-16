@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 #TODO: check LOAD_PATH configuration so that the requires can actually be relative
-require_relative '../app/token'
+require './app/token'
 
 token = Token.new
 

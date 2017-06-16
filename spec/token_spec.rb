@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../app/token'
+require './app/token'
 
 describe Token do
 
